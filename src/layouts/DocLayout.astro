@@ -1,0 +1,24 @@
+---
+import Sidebar from './Sidebar.astro';
+import '../styles/docs.css';
+---
+
+<html>
+<head>
+    <title>Your Documentation</title>
+</head>
+<body>
+  <header>
+    <h1>Your Documentation Title</h1>
+    <!-- Add any additional header elements here -->
+  </header>
+
+  <main class="docs-container">
+    <Sidebar />
+    <section class="doc-content">
+      <div class="doc-path">Your current path or breadcrumb here</div>
+      <slot></slot> <!-- This will render the main content -->
+    </section>
+  </main>
+</body>
+</html>

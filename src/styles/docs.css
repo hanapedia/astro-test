@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #2e2e2e; /* Kubernetes docs font color */
+}
+
+header {
+  background-color: #f6f6f6;
+  padding: 10px;
+  text-align: center;
+}
+
+.docs-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f9f9f9;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.doc-content {
+  width: 80%;
+  padding: 15px;
+}
+
+.doc-path {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+/* File tree styles */
+ul.file-tree {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul.file-tree > li {
+    margin: 5px 0;
+}
+
+ul.file-tree li > ul {
+    padding-left: 20px;
+}

@@ -1,16 +1,7 @@
 ---
-layout: ../layouts/BaseLayout.astro
-title: "Hello, World!"
-author: "Matthew Phillips"
-date: "09 Aug 2022"
+layout: ../layouts/DocLayout.astro
 ---
 
-# Shiki demo
+# Configure GMSA for Windows Pods and containers
 
-```js
-var foo = 'bar';
-
-function doSomething() {
-  return foo;
-}
-```
+Your markdown documentation content goes here. You can use regular markdown syntax.

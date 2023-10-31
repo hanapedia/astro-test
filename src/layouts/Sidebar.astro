@@ -1,0 +1,55 @@
+---
+const files = [
+  {
+    name: 'mainDirectory',
+    type: 'directory',
+    children: [
+      {
+        name: 'subDirectory1',
+        type: 'directory',
+        children: [
+          {
+            name: 'file1.md',
+            type: 'file'
+          },
+          {
+            name: 'file2.md',
+            type: 'file'
+          }
+        ]
+      },
+      {
+        name: 'file3.md',
+        type: 'file'
+      }
+    ]
+  },
+  {
+    name: 'file4.md',
+    type: 'file'
+  }
+];
+---
+
+<aside>
+  <ul class="file-tree">
+    {files.map(item => 
+      <li>
+        {item.type === 'file' ? 
+          <a href={`/${item.name}`}>{item.name.replace('.md', '')}</a> :
+          item.name}
+        {item.children && 
+          <ul class="file-tree">
+            {item.children.map(child => 
+              <li>
+                {child.type === 'file' ?
+                  <a href={`/${child.name}`}>{child.name.replace('.md', '')}</a> :
+                  child.name}
+              </li>
+            )}
+          </ul>
+        }
+      </li>
+    )}
+  </ul>
+</aside>
